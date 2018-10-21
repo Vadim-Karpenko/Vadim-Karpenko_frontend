@@ -1,0 +1,11 @@
+$main_font: "Quicksand", sans-serif;
+
+/* Dekstop */
+@media screen and (min-width: 481px) {
+  @import "dekstop.scss"
+}
+
+/* Mobile */
+@media screen and (max-width: 481px) {
+  @import "mobile.scss"
+}

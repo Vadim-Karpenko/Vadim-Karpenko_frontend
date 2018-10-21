@@ -1,0 +1,28 @@
+#dekstop_mode {
+    display: none;
+}
+
+header {
+    #logo {
+        font-family: $main_font;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 36px;
+    }
+    
+    .header-left {
+        height: 100%;
+        margin: auto;
+        padding-left: 10px;
+    }
+    
+    .header-right {
+        height: 100%;
+        margin: auto;
+        padding-right: 20px;
+        div {
+           float: right;
+        }
+    }
+}
