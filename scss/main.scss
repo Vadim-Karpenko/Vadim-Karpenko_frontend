@@ -1,5 +1,33 @@
 $main_font: "Quicksand", sans-serif;
 
+
+/* Global rules */
+body {
+    background-color: #F7FDFF;
+}
+
+.row {
+    margin: 0px;
+}
+
+
+/* MIXINS */
+@mixin not-dragable() {
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@mixin set_underline() {
+    text-decoration: underline;
+}
+
+
+
+
 /* Dekstop */
 @media screen and (min-width: 481px) {
   @import "dekstop.scss"

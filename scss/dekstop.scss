@@ -4,15 +4,25 @@
 .top-nav {
     padding: 0px;
     header {
-        height: 9vh;
+        transition: top 0.3s;
+        min-height: 6vh;
+        padding: 0.05vh 0px;
         background: rgba(255, 254, 254, 0.6);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        /* box-shadow: 0px 0.54vh 0.54vh rgba(0, 0, 0, 0.25); */
+        position: fixed;
+        top: 0;
+        width: 100%;
+        
+        img {
+            @include not-dragable(); /* Make all images in header not draggable */
+        }
+        
         #logo {
             font-family: $main_font;
             font-style: normal;
             font-weight: normal;
             line-height: normal;
-            font-size: 36px;
+            font-size: 3.2vh;
             height: 100%;
             display: flex;
             justify-content: center; /* align horizontal */
@@ -21,8 +31,28 @@
 
         .header-left {
             height: 100%;
-            padding-left: 20px;
-
+            padding-left: 2vh;
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center; /* align vertical */
+            float: left;
+            
+            #email_me {
+	            width: 3.74vh;
+                height: 3.74vh;
+            }
+            
+            #telegram_me {
+	            width: 2.54vh;
+                height: 2.54vh;
+                margin-left: 1.35vh;
+            }
+            
+            #call_me {
+                width: 2.79vh;
+                height: 2.79vh;
+	            margin-left: 1.35vh;
+            }
 
         }
 
@@ -31,19 +61,42 @@
             display: flex;
             justify-content: center; /* align horizontal */
             align-items: center; /* align vertical */
-            padding-right: 20px;
+            padding-right: 4vh;
             float: right;
-
-            img, span {
-               margin-left: 5px;
+            margin-right: 0px;
+            span {
+                margin-left: 0.8vh;
+                font-size: 2vh;
+            }
+            
+            img {
+                width: 2.6vh;
+                height: 2.6vh;
+            }
+            
+            #set_language {
+                @include set_underline();
             }
         }
     }
+    
+    #banner {
+        #banner_image {
+            height: 80vh;
+            background-size: 100px;
+        }
+        
+        #banned_text {
+            font-family: $main_font;
+            margin-top: -42vh;
+            
+            h3 {
+                font-size: 3.5vh;
+                margin-bottom: 1vh;
+            }
+            h4 {
+                font-size: 2.5vh;
+            }
+        }
 }
-#banner {
-    div {
-        width: 100%;
-        height: 80vh;
-        margin-top: -80px;
-    }
 }
