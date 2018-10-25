@@ -5,13 +5,17 @@
     padding: 0px;
     header {
         transition: top 0.3s;
-        min-height: 6vh;
+        
         padding: 0.05vh 0px;
         background: rgba(255, 254, 254, 0.6);
         /* box-shadow: 0px 0.54vh 0.54vh rgba(0, 0, 0, 0.25); */
         position: fixed;
         top: 0;
         width: 100%;
+        
+        .row:first-child {
+            min-height: 6vh;
+        }
         
         img {
             @include not-dragable(); /* Make all images in header not draggable */
@@ -38,19 +42,19 @@
             float: left;
             
             #email_me {
-	            width: 3.74vh;
-                height: 3.74vh;
+	            width: $navbar_images_multiplier * 3.74vh;
+                height: $navbar_images_multiplier * 3.74vh;
             }
             
             #telegram_me {
-	            width: 2.54vh;
-                height: 2.54vh;
+	            width: $navbar_images_multiplier * 2.54vh;
+                height: $navbar_images_multiplier * 2.54vh;
                 margin-left: 1.35vh;
             }
             
             #call_me {
-                width: 2.79vh;
-                height: 2.79vh;
+                width: $navbar_images_multiplier * 2.79vh;
+                height: $navbar_images_multiplier * 2.79vh;
 	            margin-left: 1.35vh;
             }
 
@@ -82,8 +86,9 @@
     
     #banner {
         #banner_image {
-            height: 80vh;
+            height: 85vh;
             background-size: 100px;
+            box-shadow: 0px 0.84vh 3vh rgba(0, 0, 0, 0.25);
         }
         
         #banned_text {
@@ -98,5 +103,100 @@
                 font-size: 2.5vh;
             }
         }
-}
+    }
+    
+    #best_comment {
+        margin-top: 15vh;
+        .best_comment__stars {
+            text-align: center;
+            img {
+                width: 3.72vh;
+                height: 3.72vh;
+                margin: 0px 0.4vh;
+                -webkit-filter: drop-shadow( 0px 0.54vh 0.54vh rgba(0, 0, 0, 0.1));
+                filter: drop-shadow( 0px 0.54vh 0.54vh rgba(0, 0, 0, 0.1));
+            }
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center; /* align vertical */
+            
+        }
+        
+        .best_comment__small_underline {
+            border-bottom: 0.15vh solid black;
+            
+            width: 45vw;
+            margin: 1.5vh auto;
+            box-shadow: 0px 0.54vh 0.54vh rgba(0, 0, 0, 0.1);
+        }
+        
+        .best_comment__big_underline {
+            border-bottom: 0.15vh solid black;
+            
+            width: 55vw;
+            margin: 1.5vh auto;
+            box-shadow: 0px 0.54vh 0.54vh rgba(0, 0, 0, 0.1);
+        }
+        
+        .best_comment__comment {
+	        margin: 3.5vh auto;
+            font-family: $main_font;
+            text-align: center;
+            width: 48vw;
+            font-size: 3.55vh;
+            text-shadow: 0px 0.54vh 0.54vh rgba(0, 0, 0, 0.1);
+            
+            p {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    
+    #skills {
+        margin-top: 25vh;
+        
+        #skills_rows {
+            margin-top: 10vh;
+            
+            .space {
+                margin-top: 13vh;
+            }
+            
+            .skill_name {
+                font-family: $main_font;
+                font-size: 3vh;
+                padding: 0px 0.5vh 1vh 0.5vh;
+                border-bottom: 0.12vh solid black;
+                min-width: 15vh;
+                padding-left: 4vh;
+            }
+            
+            
+            .skill_description {
+                font-family: $main_font;
+                padding-top: 1vh;
+                min-height: 12vh;
+                margin-top: -0.15vh;
+                font-size: 2.2vh;
+                margin-left: -0.15vh;
+                width: 100%;
+            }
+        }
+        
+    }
+    
+    .section_name {
+        text-align: center;
+        font-family: $main_font;
+        font-size: 5vh;
+    }
+    .section_note {
+        font-family: $main_font;
+        font-size: 2vh;
+        color: #343434;
+        text-align: center;
+        margin: 0px auto;
+        width: 40vw;
+    }
+    
 }
